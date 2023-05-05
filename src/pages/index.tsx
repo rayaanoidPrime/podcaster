@@ -1,9 +1,9 @@
 import { type NextPage } from "next";
 import Head from "next/head";
 import { signIn, signOut, useSession } from "next-auth/react";
-
 import { api } from "~/utils/api";
 import { Layout } from "~/components/layout";
+import { PodcastList } from "~/components/podcastList";
 
 
 const Home: NextPage = () => {
@@ -16,12 +16,11 @@ const Home: NextPage = () => {
         <meta name="description" content="Made by Rayaan <3" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <main className=" min-h-screen bg-gradient-to-b from-[#2e026d] to-[#15162c] ml-auto mr-auto ">
-        <Layout>
-          <h1 className="text-3xl font-semibold text-indigo-300 text-left">Home</h1>
-          <h2 className="text-5 font-sans text-cyan-600 py-2">Listen to your favourite podcasts</h2>
-        </Layout>
-      </main>
+      <Layout>
+          <h1 className="text-4xl font-semibold text-indigo-300 text-left">Home</h1>
+          <h2 className="text-5 font-sans text-violet-500 py-2">Listen to your favourite podcasts</h2>
+          <PodcastList podcasts={['1' , '2' , '3' , '4' , '5']}/>
+      </Layout>
     </>
   );
 };
