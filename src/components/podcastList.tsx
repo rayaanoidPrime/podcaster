@@ -8,9 +8,8 @@ interface podcastListProps {
 
 export const PodcastList: React.FC<podcastListProps> = ({podcasts}) => {
 
- console.log('Here');
    return (
-    <div className="flex gap-2 max-w-full overflow-auto scrollbar-hide">
+    <div className="flex gap-4 max-w-full overflow-auto scrollbar-hide">
         {
             podcasts.map((podcast , index) => (
                 <div className="
